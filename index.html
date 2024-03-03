@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home My_Profile</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap">
+    <link rel="stylesheet" href="Portfolio.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+</head>
+<body>
+    
+    <div class="spinner-con">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="lp-navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="left-bar logo-bar"></div>
+                <div class="logo-navbar">Deepanshu Lavania</div>
+                <div class="right-bar logo-bar"></div>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li class="nav-item" onclick="scrollMe()" id="scrollTop"><a class="nav-link"><i
+                                class="fa-solid fa-house"></i>home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                class="fa-solid fa-address-card"></i>about</a></li>
+                    <li class="nav-item"><a class="nav-link" href="project.html"><i
+                                class="fa-solid fa-file-code"></i>project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="achievement.html"><i
+                                class="fa-solid fa-trophy"></i>achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i
+                                class="fa-regular fa-envelope"></i>contact</a></li>
+                </ul>
+                <div id="laptop-mode" onclick="deviceSwitch()">
+                    <div class="switch">
+                        <div class="slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header class="phone-navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="left-bar logo-bar"></div>
+                <div class="logo-navbar">Deepanshu Lavania</div>
+                <div class="right-bar logo-bar"></div>
+            </div>
+            <div class="phone-hamburger" id="phone--hamburger">
+                <div id="phone-menu" onclick="onclickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <div class="ph-navbar" id="ph--navbar">
+                    <div class="ul-li">
+                        <div id="phone-mode" onclick="deviceSwitch()">
+                            <div class="switch">
+                                <div class="slider"></div>
+                            </div>
+                        </div>
+                        <ul class="ul-1">
+                            <li class="nav-item" onclick="scrollMe()" id="scrollTop"><a class="nav-link"><i
+                                class="fa-solid fa-house"></i>home</a>
+                            </li>
+                        </ul>
+                        <ul class="ul-2">
+                            <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                        class="fa-solid fa-address-card"></i>about me</a></li>
+                        </ul>
+                        <ul class="ul-3">
+                            <li class="nav-item"><a class="nav-link" href="project.html"><i
+                                        class="fa-solid fa-file-code"></i>project</a></li>
+                        </ul>
+                        <ul class="ul-4">
+                            <li class="nav-item"><a class="nav-link" href="achievement.html"><i
+                                        class="fa-solid fa-trophy"></i>achievements</a></li>
+                        </ul>
+                        <ul class="ul-5">
+                            <li class="nav-item"><a class="nav-link" href="contact.html"><i
+                                        class="fa-regular fa-envelope"></i>contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- start hero section -->
+
+    <div class="empty"></div>
+
+    <main>
+        <div class="section-my">
+            <div class="container1 grid grid-two--cols">
+                <div class="section-my--content">
+                    <p class="p1 heading">hello, this is me</p>
+                    <p class="name heading">"deepanshu lavania"</p>
+                    <div class="main-heading">
+                        <h1> i'm a</h1>
+                        <div class="full-name">
+                            <h1 class="title">frontend developer.</h1>
+                            <h1 class="slash"></h1>
+                        </div>
+                    </div>
+                    <p class="my-para">" I think, if you hava a firm desire to learn something then nothing is
+                        impossible and
+                        don't forget -- practice makes man perfect "</p>
+                    <!-- <p class="my-para">" I’m not a great programmer; I’m just a good programmer with great habits. ― Kent Beck "</p> -->
+                    <div class="my-btn">
+                        <a href="about.html" class="btn know_more">know more</a>
+                        <a href="mailto:deepanshusingh02697@gmail.com" class="btn hire_me">hire me</a>
+                    </div>
+                </div>
+                <div class="section-my--image myimage">
+                    <div class="small-circle">
+                        <div class="sml-cl1 smlc"></div>
+                        <div class="sml-cl2 smlc"></div>
+                        <div class="sml-cl3 smlc"></div>
+                    </div>
+                    <div class="my-img">
+                        <img src="MainImg.jpg" alt="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- start hero section -->
+
+    <!-- start contact section -->
+    <div class="section-contact">
+        <div class="container1 grid grid-two--cols">
+            <div class="contact-content">
+                <div class="container">
+                    <h2 class="contact-heading">Connect Me</h2>
+                    <p class="contact-subheading">
+                        Get in touch with me. I'm always here to get your positivenesss.
+                    </p>
+                </div>
+                <form id="form_id" onsubmit="event.preventDefault();">
+                    <div class="ph ph-1">
+                        <input type="name" name="name" id="name" required autocomplete="off"
+                            placeholder="Enter your name">
+                    </div>
+                    <div class="ph ph-2">
+                        <input type="email" name="email" id="email" autocomplete="off" required
+                            placeholder="Enter your Gmail">
+                    </div>
+                    <div class="ph ph-3">
+                        <textarea name="message" id="message" cols="30" rows="5"
+                            placeholder="Enter your message"></textarea>
+                    </div>
+                    <div class="btn sub-btn">
+                        <button type="submit" class="btn btn-submit" onclick="sendMail()">Send Message</button>
+                        <button type="submit" class="btn btn-clear" onclick="clearMail()"><i
+                                class="fa-solid fa-rotate"></i>reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End contact section -->
+    <hr>
+    <footer class="footer">
+        <div class="foot">
+            &copy; copyright by " deepanshu lavania "
+        </div>
+    </footer>
+
+
+    <script src="Portfolio.js"></script>
+    <script>
+        //Start email.js
+        (function () {
+            emailjs.init({
+                publicKey: "PE5Z1Ejxd7dYIkGpc",
+            });
+        })();
+        //end email.js
+    </script>
+</body>
+
+</html>

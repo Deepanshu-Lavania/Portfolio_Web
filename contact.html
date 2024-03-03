@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap">
+  <link rel="stylesheet" href="Portfolio.css">
+</head>
+
+<body>
+  <header class="proj-navbar">
+    <div class="container grid grid-three--cols">
+      <div class="back-con">
+        <div class="back-btn " onclick="backClick()">
+          <i class="fa-solid fa-arrow-left"> back</i>
+        </div>
+      </div>
+      <div class="project-logo">
+        <!-- <div class="logo-navbar">Deepanshu Lavania</div> -->
+        <div class="logo-navbar">
+          <div class="left-bar logo-bar"></div>
+          <span>D</span>eepanshu Lavania
+          <div class="right-bar logo-bar"></div>
+        </div>
+      </div>
+      <div class="choose-pro">
+        <div class="all_project" onclick="reload_rotate()">
+          <i class="fa-solid fa-rotate"></i>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <div class="empty"></div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39737.080662364395!2d77.61931005186082!3d28.958400377921564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c66f2117a2667%3A0x2aeeb77335221dd4!2sVidya%20Knowledge%20Park%2C%20Meerut%2C%20Uttar%20Pradesh%20250002!5e0!3m2!1sen!2sin!4v1708405472199!5m2!1sen!2sin"
+    width="100%" height="100%" style="border:0; padding-top:2rem;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- start contact section -->
+  <div class="section-contact">
+    <div class="container1 grid grid-two--cols">
+      <div class="contact-content">
+        <div class="container">
+          <h2 class="contact-heading">Connect Me</h2>
+          <p class="contact-subheading">
+            Get in touch with me. I'm always here to get your openion.
+          </p>
+        </div>
+        <form id="form_id" onsubmit="event.preventDefault();">
+          <div class="ph ph-1">
+            <input type="name" name="name" id="name" required autocomplete="off" placeholder="Enter your name">
+          </div>
+          <div class="ph ph-2">
+            <input type="email" name="email" id="email" autocomplete="off" required placeholder="Enter your Gmail">
+          </div>
+          <div class="ph ph-3">
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Enter your message"></textarea>
+          </div>
+          <div class="btn sub-btn">
+            <button type="submit" class="btn btn-submit" onclick="sendMail()">Send Message</button>
+            <button type="submit" class="btn btn-clear" onclick="clearMail()"><i
+                class="fa-solid fa-rotate"></i>reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- End contact section -->
+  <footer class="footer">
+    <div class="foot">
+        &copy; copyright by " deepanshu lavania "
+    </div>
+</footer>
+  <script src="Portfolio.js"></script>
+  <script>
+    //start contact reload
+    var all_container = document.querySelector(".all_project");
+    all_container.reload_rotate = function () {
+      window.location.reload();
+    }
+    //end contact reload
+  </script>
+</body>
+
+</html>

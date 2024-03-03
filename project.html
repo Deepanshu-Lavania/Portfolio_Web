@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap">
+    <link rel="stylesheet" href="Portfolio.css">
+    </head>
+
+<body>
+    <header class="proj-navbar" >
+        <div class="container grid grid-three--cols">
+            <div class="back-con">
+                <div class="back-btn " >
+                    <i class="fa-solid fa-arrow-left" onclick="backClick()"> back</i>
+                </div>
+            </div>
+            <div class="project-logo"  >
+                <!-- <div class="logo-navbar">Deepanshu Lavania</div> -->
+                <div class="logo-navbar" >
+                    <div class="left-bar logo-bar"></div>
+                    <div class="full-name" id="phone-mode">
+                        <span>D</span>eepanshu Lavania
+                    </div>
+                    <div class="right-bar logo-bar"></div>
+                </div>
+            </div>
+            <div class="choose-pro">
+                <select name="sel-pro" id="sel-pro" onchange="proChange()">
+                    <option value="all">All</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="web-dev">Web-Dev</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <div class="empty"></div>
+    <section class="projects">
+        <div class="grid  grid-three--cols">
+            <div class="content web-dev all" id="web-dev">
+                <div class="Web1_rupee same-cont">
+                    <div class="back-img">
+                        <h4>
+                            CONCURRENCY CONVERTER<br> <br> HOVER FOR MORE...
+                        </h4>
+                    </div>
+                    <div class="back-code">
+                        <h1>CONCURRENCY CONVERTER<br><br>
+                            CONCURRENCY CONVERTER IS USED TO SOLVE THE PROBLEM OF WHAT IS THE RAE OF OUR CURRECY IN OTHER COUNTRIES CURRENCY.</h1>
+                        <a href="#">SOURCE CODE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="content web-dev all" id="web-dev">
+                <div class="Web2_EduHub same-cont">
+                    <div class="back-img">
+                        <h4>
+                            LAVANIA EDUHUB IS THE EDUCATION PLATFORM<br> <br> HOVER FOR MORE...
+                        </h4>
+                    </div>
+                    <div class="back-code">
+                        <h1>LAVANIA EDUHUB<br><br>
+                            LAVANIA EDUHUB IS THE EDUCATION PLATFORM IN WHICH STUDENT CAN SOLVE THEIR DOUBT THROUGH LAVANIA EDUHUB. </h1>
+                        <a href="#">SOURCE CODE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="content web-dev all" id="web-dev">
+                <div class="Web3_SWG same-cont">
+                    <div class="back-img">
+                        <h4>
+                            SNAKE WATER GUN IS THE ENJOYABLE GAME<br><br> HOVER FOR MORE...
+                        </h4>
+                    </div>
+                    <div class="back-code">
+                        <h1>SNAKE WATER GUN<br><br>
+                            SNAKE WATER GUN IS THE GAME DUE TO WHICH A PERSON CAN ENJOY BY PLAYING WITH COMPUTER</h1>
+                        <a href="#">SOURCE CODE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="foot">
+            &copy; copyright by " deepanshu lavania "
+        </div>
+    </footer>
+    
+    <script src="Portfolio.js"></script>
+    <script>
+        // start project
+        var containerSelector = document.getElementById('sel-pro');
+        var containers = document.querySelectorAll('.content');
+        containerSelector.proChange = function () {
+            var selectedContainerClass = containerSelector.value;
+            console.log(selectedContainerClass);
+            containers.forEach(function (con_ele) {
+                con_ele.style.display = 'none';
+            });
+            var selectedContainers = document.querySelectorAll('.' + selectedContainerClass);
+            console.log(selectedContainers);
+            selectedContainers.forEach(function (con_ele) {
+                if (selectedContainers === null) {
+                    window.location.reload();
+                } else {
+                    con_ele.style.display = 'block';
+                }
+            });
+        }
+        // End project
+    </script>
+</body>
+
+</html>

@@ -270,7 +270,7 @@ li {
             & li a:hover {
                 font-family: var(--text2-font-family);
                 color: rgb(245, 163, 11);
-                font-size: .99rem;
+                font-size: .77rem;
             }
 
             & li a:hover:after {
@@ -351,9 +351,14 @@ li {
                     margin-right: .2rem;
                 }
             }
-
+            
             & li a {
                 color: var(--bg-color);
+            }
+            & li {
+                ::after {
+                    border-bottom: none;
+                }
             }
         }
 
